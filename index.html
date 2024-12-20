@@ -8,9 +8,10 @@
     <style>
         /* Color Palette */
         :root {
-            --primary-color: #4CAF50; /* Green */
-            --secondary-color: #FF5722; /* Orange */
-            --background-color: #F4F4F4; /* Light Grey */
+            --primary-color: #3498db; /* Blue */
+            --secondary-color: #e74c3c; /* Red */
+            --background-color: #ecf0f1; /* Light Grey */
+            --text-color: #2c3e50; /* Dark Grey */
         }
 
         /* Basic Reset */
@@ -21,77 +22,93 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: var(--background-color);
-            color: #333;
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
-        /* Header Styles */
         header {
             background-color: var(--primary-color);
-            padding: 20px;
-            text-align: center;
             color: white;
+            padding: 30px 0;
+            text-align: center;
         }
 
         header h1 {
-            font-size: 36px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
             display: flex;
             justify-content: center;
+            margin-top: 20px;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
         }
 
-        /* Section Styles */
-        section {
-            opacity: 0;
-            transform: translateX(-100%);
-            transition: opacity 1s ease, transform 1s ease;
-            padding: 50px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        section h2 {
-            color: var(--primary-color);
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* Navigation links on hover */
         nav ul li a:hover {
             color: var(--secondary-color);
         }
 
-        /* Mobile Responsiveness */
+        section {
+            padding: 50px;
+            margin: 30px auto;
+            background-color: white;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile responsiveness */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 28px;
+                font-size: 2rem;
             }
 
             nav ul {
@@ -100,6 +117,7 @@
 
             section {
                 padding: 30px;
+                width: 90%;
             }
         }
     </style>
@@ -112,8 +130,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#internships">Internships</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -122,79 +139,59 @@
     </header>
 
     <section id="about">
-        <h2>Basic Details</h2>
+        <h2>About Me</h2>
         <p><strong>Name:</strong> Ganagalla Chandu</p>
         <p><strong>Phone:</strong> 9177212314</p>
         <p><strong>Email:</strong> chanduganagalla@gmail.com</p>
-        <p><strong>Location:</strong> Srikakulam, Andhra Pradesh- 532001</p>
+        <p><strong>Location:</strong> Srikakulam, Andhra Pradesh - 532001</p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ganagalla-chandu-86587a198/" target="_blank">LinkedIn Profile</a></p>
-        <p><strong>Career Objective:</strong> Intending to work in an entry-level position in an organization that drives my career by utilizing my profound knowledge and skills.</p>
+        <p><strong>Career Objective:</strong> Seeking an entry-level position in an organization where I can leverage my skills and knowledge in data analytics and computer science to contribute to business success.</p>
     </section>
 
-    <section id="internships">
-        <h2>Academic Background</h2>
-        <p><strong>Ram Janki Mahavidyalaya College</strong> - 2023</p>
-        <p><strong>B.Sc. Honors, Computer Science</strong> - 7.4 CGPA</p>
-        <p><strong>NRI Junior College</strong> - 2019</p>
-        <p><strong>Intermediate</strong> - 8.3 CGPA</p>
-        <p><strong>Ravindra Bharathi School</strong> - 2017</p>
-        <p><strong>SSC, 10th Standard</strong> - 9.8 CGPA</p>
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Ram Janki Mahavidyalaya College (2023)</strong> - B.Sc. Honors in Computer Science (7.4 CGPA)</p>
+        <p><strong>NRI Junior College (2019)</strong> - Intermediate (8.3 CGPA)</p>
+        <p><strong>Ravindra Bharathi School (2017)</strong> - SSC (9.8 CGPA)</p>
     </section>
 
-    <section id="experience">
-        <h2>Trainings and Projects Undertaken</h2>
-        <h3>Project 1: Anti – Money Laundering (Feb 2023 - Mar 2023)</h3>
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Anti-Money Laundering (Feb 2023 - Mar 2023)</h3>
         <p><strong>Client:</strong> Innodatatics</p>
-        <p><strong>Business Problem:</strong> Money laundering undermines financial institutions' integrity, enabling criminals to profit from illegal activities and potentially finance terrorism, posing significant global economic and social risks.</p>
-        <p><strong>Business Solution:</strong> Built a classification model that helps in identifying fraudulent transactions.</p>
-        <p><strong>Technology Stack:</strong></p>
-        <ul>
-            <li>Database: PostgreSQL</li>
-            <li>Programming Language: Python</li>
-            <li>Libraries: Numpy, Pandas, Sklearn, Matplotlib, Feature-engine, Keras, TensorFlow</li>
-            <li>Deployment Tools: Streamlit</li>
-        </ul>
+        <p><strong>Problem:</strong> Identifying fraudulent transactions to prevent money laundering.</p>
+        <p><strong>Tech Stack:</strong> PostgreSQL, Python, TensorFlow, Streamlit</p>
 
-        <h3>Project 2: Optimization of Prima-13 Machine Downtime (Apr 2023 - May 2023)</h3>
-        <p><strong>Business Problem:</strong> Reducing unplanned downtime in the PRIME 13 machine, crucial for TMT bar steel rod production, is a pressing business challenge for the Manufacturing Company due to significant disruptions impacting productivity.</p>
-        <p><strong>Technology Stack:</strong></p>
-        <ul>
-            <li>Programming Language: Python</li>
-            <li>Libraries: NumPy, Pandas, Scikit-learn, Matplotlib</li>
-            <li>Data Visualization: Matplotlib, Seaborn</li>
-            <li>Dashboard: PowerBI</li>
-        </ul>
-        <p><strong>Business Impact:</strong></p>
-        <ul>
-            <li>Reduced idle time of the machine by 6-10%</li>
-            <li>Increased productivity and revenue by an additional 20-30%</li>
-        </ul>
+        <h3>Optimization of Prima-13 Machine Downtime (Apr 2023 - May 2023)</h3>
+        <p><strong>Problem:</strong> Reducing downtime in a critical machine for steel rod production.</p>
+        <p><strong>Tech Stack:</strong> Python, PowerBI, Scikit-learn</p>
+        <p><strong>Impact:</strong> Reduced machine downtime by 6-10%, increasing productivity and revenue by 20-30%.</p>
     </section>
 
     <section id="certifications">
         <h2>Certifications</h2>
         <ul>
-            <li>Data Science with Python Programming Language – 360digiTMG, 2022</li>
-            <li>Data Visualization Using Power BI – 360digitTMG, 2023</li>
-            <li>Python 101 for Data Science – IBM, 2023</li>
-            <li>Technology Virtual Experience Program – Forage, 2023</li>
-            <li>Certificate Course on Data Science – Futureskills Prime, 2023</li>
+            <li>Data Science with Python Programming Language – 360digiTMG (2022)</li>
+            <li>Data Visualization Using Power BI – 360digiTMG (2023)</li>
+            <li>Python 101 for Data Science – IBM (2023)</li>
+            <li>Technology Virtual Experience Program – Forage (2023)</li>
+            <li>Certificate Course on Data Science – Futureskills Prime (2023)</li>
         </ul>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Artificial Neural Networks</li>
-            <li>Convolutional Neural Networks</li>
+            <li>Artificial Neural Networks (ANN)</li>
+            <li>Convolutional Neural Networks (CNN)</li>
             <li>SQL</li>
+            <li>Python for Data Analytics</li>
             <li>Power BI</li>
-            <li>Python in Data Analytics</li>
         </ul>
     </section>
 
     <script>
-        // Intersection Observer for triggering animations
+        // Simple animation for sections
         const sections = document.querySelectorAll('section');
 
         const observer = new IntersectionObserver((entries, observer) => {
@@ -214,3 +211,4 @@
 </body>
 
 </html>
+
