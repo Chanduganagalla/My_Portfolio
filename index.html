@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganagalla Chandu - Portfolio</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --primary-color: #3498db; /* Blue */
+            --secondary-color: #e74c3c; /* Red */
+            --background-color: #ecf0f1; /* Light Grey */
+            --text-color: #2c3e50; /* Dark Grey */
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 50px;
+            margin: 30px auto;
+            background-color: white;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        p,
+        ul {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 30px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ganagalla Chandu</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p><strong>Name:</strong> Ganagalla Chandu</p>
+        <p><strong>Phone:</strong> 9177212314</p>
+        <p><strong>Email:</strong> chanduganagalla@gmail.com</p>
+        <p><strong>Location:</strong> Srikakulam, Andhra Pradesh - 532001</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ganagalla-chandu-86587a198/" target="_blank">LinkedIn Profile</a></p>
+        <p><strong>Career Objective:</strong> Seeking an entry-level position in an organization where I can leverage my skills and knowledge in data analytics and computer science to contribute to business success.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Ram Janki Mahavidyalaya College (2023)</strong> - B.Sc. Honors in Computer Science (7.4 CGPA)</p>
+        <p><strong>NRI Junior College (2019)</strong> - Intermediate (8.3 CGPA)</p>
+        <p><strong>Ravindra Bharathi School (2017)</strong> - SSC (9.8 CGPA)</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Anti-Money Laundering (Feb 2023 - Mar 2023)</h3>
+        <p><strong>Client:</strong> Innodatatics</p>
+        <p><strong>Problem:</strong> Identifying fraudulent transactions to prevent money laundering.</p>
+        <p><strong>Tech Stack:</strong> PostgreSQL, Python, TensorFlow, Streamlit</p>
+
+        <h3>Optimization of Prima-13 Machine Downtime (Apr 2023 - May 2023)</h3>
+        <p><strong>Problem:</strong> Reducing downtime in a critical machine for steel rod production.</p>
+        <p><strong>Tech Stack:</strong> Python, PowerBI, Scikit-learn</p>
+        <p><strong>Impact:</strong> Reduced machine downtime by 6-10%, increasing productivity and revenue by 20-30%.</p>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Data Science with Python Programming Language – 360digiTMG (2022)</li>
+            <li>Data Visualization Using Power BI – 360digiTMG (2023)</li>
+            <li>Python 101 for Data Science – IBM (2023)</li>
+            <li>Technology Virtual Experience Program – Forage (2023)</li>
+            <li>Certificate Course on Data Science – Futureskills Prime (2023)</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Artificial Neural Networks (ANN)</li>
+            <li>Convolutional Neural Networks (CNN)</li>
+            <li>SQL</li>
+            <li>Python for Data Analytics</li>
+            <li>Power BI</li>
+        </ul>
+    </section>
+
+    <script>
+        // Simple animation for sections
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>
