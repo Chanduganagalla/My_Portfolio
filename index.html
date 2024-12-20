@@ -106,6 +106,25 @@
             text-decoration: underline;
         }
 
+        .profile-picture {
+            display: block;
+            margin: 0 auto 30px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             header h1 {
@@ -141,6 +160,7 @@
 
     <section id="about">
         <h2>About Me</h2>
+        <img src="path/to/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
         <p><strong>Name:</strong> Ganagalla Chandu</p>
         <p><strong>Phone:</strong> 9177212314</p>
         <p><strong>Email:</strong> chanduganagalla@gmail.com</p>
@@ -159,11 +179,13 @@
     <section id="projects">
         <h2>Projects</h2>
         <h3>Anti-Money Laundering (Feb 2023 - Mar 2023)</h3>
+        <img src="path/to/project-image1.jpg" alt="Anti-Money Laundering Project" class="project-image">
         <p><strong>Client:</strong> Innodatatics</p>
         <p><strong>Problem:</strong> Identifying fraudulent transactions to prevent money laundering.</p>
         <p><strong>Tech Stack:</strong> PostgreSQL, Python, TensorFlow, Streamlit</p>
 
         <h3>Optimization of Prima-13 Machine Downtime (Apr 2023 - May 2023)</h3>
+        <img src="path/to/project-image2.jpg" alt="Prima-13 Machine Downtime Optimization Project" class="project-image">
         <p><strong>Problem:</strong> Reducing downtime in a critical machine for steel rod production.</p>
         <p><strong>Tech Stack:</strong> Python, PowerBI, Scikit-learn</p>
         <p><strong>Impact:</strong> Reduced machine downtime by 6-10%, increasing productivity and revenue by 20-30%.</p>
